@@ -20,6 +20,25 @@ let chot_func = (num1, num2) => {
 }
 
 
+let sequense = (start,step) => {
+    localStorage.setItem('num', start);
+    localStorage.setItem('step', step);
+}
+
+let generator = () => {
+    let num = localStorage.getItem('num');
+    let step = localStorage.getItem('step');
+    const sum = parseInt(num) + parseInt(step)
+
+    localStorage.setItem('num', sum);
+    console.log(localStorage.getItem('num'));
+}
+
+let myPow = (num,step) =>{
+    return Math.pow(num,step)
+}
+
+
 function BtnClick(){
 
     let num1 = document.querySelector("#num1").value;
@@ -27,3 +46,9 @@ function BtnClick(){
 
     alert(chot_func(num1,num2));
 }
+
+
+// sequense(30,2)
+// generator()
+// generator()
+// generator()
